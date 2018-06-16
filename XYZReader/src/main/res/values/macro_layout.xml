@@ -16,4 +16,7 @@
 
     <dimen name="article_detail_vertical_margin">16dp</dimen>
     <dimen name="article_detail_horizontal_margin">16dp</dimen>
+
+    <item name="match_parent" type="dimen">-1</item>
+    <dimen name="article_width">@dimen/match_parent</dimen>
 </resources>
