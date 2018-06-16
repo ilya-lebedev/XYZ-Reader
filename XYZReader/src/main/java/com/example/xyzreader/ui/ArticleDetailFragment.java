@@ -151,9 +151,7 @@ public class ArticleDetailFragment extends Fragment implements
             bylineView.setText(getString(R.string.format_article_byline, dateString,
                     mCursor.getString(ArticleLoader.Query.AUTHOR)));
 
-            // TODO optimize
-            bodyView.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY)
-                    .replaceAll("(\r\n|\n)", "<br />")));
+            bodyView.setText(mCursor.getString(ArticleLoader.Query.BODY));
             Picasso.get().load(mCursor.getString(ArticleLoader.Query.PHOTO_URL)).into(mPhotoView);
         } else {
             mRootView.setVisibility(View.GONE);
