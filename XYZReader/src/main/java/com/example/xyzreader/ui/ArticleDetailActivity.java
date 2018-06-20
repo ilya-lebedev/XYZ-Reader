@@ -44,7 +44,7 @@ public class ArticleDetailActivity extends AppCompatActivity
         mPager = findViewById(R.id.pager);
         mPager.setAdapter(mPagerAdapter);
 
-        mPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+        mPager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {
                 if (mCursor != null) {
